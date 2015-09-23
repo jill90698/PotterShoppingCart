@@ -76,5 +76,24 @@ namespace PotterShoppingCart.Tests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Test_PotterShoppingCart_1_first_and_1_second_book_should_be_190()
+        {
+            //Arrange
+            var target = new PotterShoppingCart();
+
+            var order = new Dictionary<PotterEpisode, int>();
+            order.Add(PotterEpisode.First, 1);
+            order.Add(PotterEpisode.Second, 1);
+
+            decimal expected = 190;
+
+            //Act
+            decimal actual = target.ComputeOrderAmount(order);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
