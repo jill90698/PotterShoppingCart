@@ -32,6 +32,9 @@ namespace PotterShoppingCart
                     case 3:
                         discount = 0.9m;
                         break;
+                    case 4:
+                        discount = 0.8m;
+                        break;
                     default:
                         discount = 1;
                         break;
